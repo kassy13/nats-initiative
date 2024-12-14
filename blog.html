@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity Blog Page</title>
+  <link rel="stylesheet" href="css/blog.css">
+  <link rel="stylesheet" href="css/nav.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+
+      <nav>
+        <h1>KOSISOCHUKWU INITIATIVE</h1>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about-us.html">About Us</a></li>
+          <li><a href="/ourcauses.html">Our Causes</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+        <i class="ri-menu-line hamburger"></i>
+      </nav>
+      <h2>Charity Blog</h2>
+      <input type="text" id="searchBar" placeholder="Search blog posts...">
+    </header>
+
+    <!-- Categories at the top -->
+    <section id="categories" class="categories">
+      <h2>Categories</h2>
+      <div class="categories-list">
+        <button onclick="fetchPosts('animals')">Animals</button>
+        <button onclick="fetchPosts('education')">Education</button>
+        <button onclick="fetchPosts('health')">Health</button>
+        <button onclick="fetchPosts('environment')">Environment</button>
+      </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="content-grid">
+      <!-- Left Column: Latest and Trending Posts -->
+      <aside class="side-content">
+        <section id="latestPosts" class="latest-posts">
+          <h2>Latest Posts</h2>
+          <div id="latestPostsContainer"></div>
+        </section>
+
+        <section id="trendingPosts" class="trending-posts">
+          <h2>Trending</h2>
+          <div id="trendingPostsContainer"></div>
+        </section>
+      </aside>
+
+      <!-- Right Column: Blog Posts and Pagination -->
+      <section id="blogPosts" class="blog-posts"></section>
+      <div id="pagination" class="pagination"></div>
+    </main>
+  </div>
+
+
+  <script src="/js/blog.js"></script>
+</body>
+</html>
